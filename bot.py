@@ -1,7 +1,3 @@
-from environs import Env
+from config_data.config import load_config
 
-env = Env()
-env.read_env()
-
-BOT_TOKEN = env('BOT_TOKEN')
-ADMIN_ID = env.int('ADMIN_ID')
+config = load_config('.env')
